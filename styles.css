@@ -83,7 +83,11 @@ h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.3rem); }
 .projects-page { min-height: calc(100vh - 156px); padding: 4.5rem clamp(1.5rem, 12vw, 12rem) 5rem; background: white; }
 .projects-heading { margin-bottom: 2.5rem; }
 .projects-heading h1 { font-size: clamp(2.8rem, 6vw, 5rem); }
-.resume-entry { max-width: 900px; padding: 2rem clamp(1.25rem, 4vw, 2.5rem); border-left: 4px solid var(--red); background: var(--paper); }
+.resume-entry { max-width: 1050px; padding: 2rem clamp(1.25rem, 4vw, 2.5rem); border-left: 4px solid var(--red); background: var(--paper); display: grid; grid-template-columns: minmax(0, 1fr) minmax(170px, 250px); align-items: center; gap: clamp(1.5rem, 4vw, 3rem); }
+.resume-copy { min-width: 0; }
+.resume-image { margin: 0; padding: 0.7rem; background: white; border: 1px solid var(--line); }
+.resume-image img { display: block; width: 100%; height: auto; }
+.resume-image figcaption { margin-top: 0.55rem; color: var(--muted); font-size: 0.78rem; text-align: center; }
 .resume-entry-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
 .resume-entry h2 { font-size: clamp(1.7rem, 3.5vw, 2.5rem); }
 .resume-date { margin: 0; color: var(--red-deep); font-size: 0.9rem; font-weight: 700; white-space: nowrap; }
@@ -118,6 +122,8 @@ h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.3rem); }
   .projects-page { min-height: calc(100vh - 148px); padding-top: 3.5rem; padding-bottom: 3.5rem; }
   .projects-heading { margin-bottom: 2rem; }
   .resume-entry-heading { align-items: flex-start; flex-direction: column; gap: 0.3rem; }
+  .resume-entry { grid-template-columns: minmax(0, 1fr); }
+  .resume-image { width: min(100%, 260px); justify-self: center; }
   .intro-section, .interests-section { padding-top: 3.5rem; padding-bottom: 3.5rem; }
   .interest-list { grid-template-columns: repeat(2, 1fr); row-gap: 1.4rem; }
   .site-footer { align-items: flex-start; flex-direction: column; justify-content: center; }
