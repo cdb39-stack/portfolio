@@ -96,6 +96,16 @@ h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.3rem); }
 .skill-tags li { padding: 0.5rem 0.8rem; border: 1px solid var(--line); border-radius: 999px; color: var(--red-deep); background: white; font-size: 0.9rem; }
 .certification-list li { align-items: flex-start; }
 .certification-list span { font-weight: 500; }
+.contact-page { min-height: calc(100vh - 156px); padding: 4.5rem clamp(1.5rem, 12vw, 12rem) 5rem; background: white; }
+.contact-heading { margin-bottom: 2.5rem; }
+.contact-heading h1 { font-size: clamp(2.8rem, 6vw, 5rem); }
+.contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.contact-card { min-width: 0; padding: 1.8rem; border: 1px solid var(--line); background: var(--paper); }
+.contact-card:nth-child(2) { background: var(--blush); }
+.contact-card .eyebrow { margin-bottom: 1.1rem; }
+.contact-card h2 { margin-bottom: 1.1rem; font-size: clamp(1.65rem, 3vw, 2.25rem); }
+.contact-card a { color: var(--red-deep); overflow-wrap: anywhere; }
+.contact-card a:hover { color: #71353c; }
 .projects-page { min-height: calc(100vh - 156px); padding: 4.5rem clamp(1.5rem, 12vw, 12rem) 5rem; background: white; }
 .projects-heading { margin-bottom: 2.5rem; }
 .projects-heading h1 { font-size: clamp(2.8rem, 6vw, 5rem); }
@@ -135,10 +145,12 @@ h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.3rem); }
   .intro-section { grid-template-columns: 1fr; gap: 1.5rem; }
   .about-page { padding-top: 3.5rem; padding-bottom: 3.5rem; }
   .skills-page { min-height: calc(100vh - 148px); padding-top: 3.5rem; padding-bottom: 3.5rem; }
+  .contact-page { min-height: calc(100vh - 148px); padding-top: 3.5rem; padding-bottom: 3.5rem; }
   .about-heading { margin-bottom: 2rem; }
   .about-grid { grid-template-columns: 1fr; }
   .education-card { grid-row: auto; }
   .skills-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
   .projects-page { min-height: calc(100vh - 148px); padding-top: 3.5rem; padding-bottom: 3.5rem; }
   .projects-heading { margin-bottom: 2rem; }
   .resume-entry-heading { align-items: flex-start; flex-direction: column; gap: 0.3rem; }
