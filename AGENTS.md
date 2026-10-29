@@ -8,7 +8,7 @@ Keep the site usable by opening `index.html` directly and when published from th
 
 ## Design direction
 
-Use a calm garden palette: leafy greens and sage for the environment, warm cream for content panels, and small soft rose, lilac, and butter-yellow floral accents. The single-page site should feel like a garden path as visitors scroll, with foliage framing raised, readable content sections. Keep text dark enough for strong contrast. Prefer system fonts and locally stored assets so the site remains lightweight and works offline.
+Use a calm garden palette: light greens and sage for the environment, warm cream for content panels, and soft lilac or butter-yellow floral accents. Do not use red, pink, or rose tones. The single-page site should feel like a garden path as visitors scroll, with foliage framing raised, readable content sections. Keep text dark enough for strong contrast. Prefer system fonts and locally stored assets so the site remains lightweight and works offline.
 
 ## Technical rules
 

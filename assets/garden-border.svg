@@ -14,7 +14,7 @@
       <path d="M-18 8 20 27" fill="none" stroke="#68895a" stroke-width="1.5"/>
     </g>
     <g id="flower">
-      <g fill="#f3c1bb" stroke="#d98e8b" stroke-width="1.5">
+      <g fill="#d8eac5" stroke="#91b277" stroke-width="1.5">
         <ellipse cy="-15" rx="8" ry="14"/>
         <ellipse cy="-15" rx="8" ry="14" transform="rotate(60)"/>
         <ellipse cy="-15" rx="8" ry="14" transform="rotate(120)"/>
