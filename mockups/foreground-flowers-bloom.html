@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#e4f0dc">
+    <meta name="description" content="The personal portfolio of Christopher Bennett, a Software and Data Engineering Technology student at NJIT.">
+    <title>Christopher Bennett | Foreground Flowers in Bloom</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js" defer></script>
+      <link rel="stylesheet" href="floral-directions.css">
+  </head>
+  <body class="garden-bloom">
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Christopher Bennett home">CB<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span class="menu-label">Menu</span>
+      </button>
+      <nav class="navigation" id="primary-navigation" aria-label="Main navigation">
+        <a href="#home" aria-current="location">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <nav class="floral-switcher" aria-label="Floral garden previews">
+      <span>Floral direction:</span>
+      <a href="loose-botanical.html">Loose Botanical</a>
+      <a href="foreground-flowers.html">Foreground Flowers</a>
+      <a href="foreground-flowers-bloom.html" aria-current="page">Flowers in Bloom</a>
+      <a href="changing-garden.html">Changing Garden</a>
+    </nav>
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Software &amp; Data Engineering Technology · NJIT</p>
+          <h1 id="page-title">Hello, I’m <span>Christopher</span>.</h1>
+          <p class="hero-intro">A first-year student, curious creator, and collaborative hard-worker.</p>
+          <a class="button-link" href="#about">Get to know me <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-mark" aria-hidden="true">
+          <span class="mark-circle"></span>
+          <span class="mark-initials">CB</span>
+          <span class="mark-caption">curious by nature</span>
+        </div>
+      </section>
+
+      <section class="about-page" id="about" aria-labelledby="about-title">
+        <header class="about-heading">
+          <p class="eyebrow">Background, education &amp; interests</p>
+          <h2 id="about-title">About Me</h2>
+        </header>
+        <div class="about-grid">
+          <section class="about-card" aria-labelledby="background-title">
+            <p class="eyebrow">01</p>
+            <h3 id="background-title">Personal Background</h3>
+            <p>I’m 18 years old, from New Jersey, and African American.</p>
+          </section>
+          <section class="about-card education-card" aria-labelledby="education-title">
+            <p class="eyebrow">02</p>
+            <h3 id="education-title">Education</h3>
+            <ol class="education-list">
+              <li><span class="education-years">2022–2026</span><h4>Hightstown High School</h4></li>
+              <li><span class="education-years">2026–Present</span><h4>New Jersey Institute of Technology</h4><p>Expected graduation: 2030</p></li>
+            </ol>
+          </section>
+          <section class="about-card about-interests" aria-labelledby="about-interests-title">
+            <p class="eyebrow">03</p>
+            <h3 id="about-interests-title">Interests</h3>
+            <ul class="about-interest-list"><li>Reading</li><li>Writing</li><li>Theater</li><li>Programming</li></ul>
+          </section>
+        </div>
+      </section>
+
+      <section class="projects-page" id="projects" aria-labelledby="projects-title">
+        <header class="projects-heading"><p class="eyebrow">Selected work</p><h2 id="projects-title">Projects</h2></header>
+        <div class="resume-list">
+          <article class="resume-entry" aria-labelledby="onshape-title">
+            <div class="resume-copy">
+              <div class="resume-entry-heading"><h3 id="onshape-title">Onshape Projects</h3><p class="resume-date"><time datetime="2026-09">Sep. 2026</time> – <time datetime="2026-12">Dec. 2026</time></p></div>
+              <p class="resume-subtitle">Intro to Engineering Technology Design <span aria-hidden="true">|</span> Newark, New Jersey</p>
+              <ul class="resume-bullets"><li>Worked on a multitude of 3D modeling projects for my ET 103 class, instructed by Dr. Sahidur Rahman.</li><li>Designed and created multiple 3D models for everyday use, such as a scooter and ring.</li></ul>
+            </div>
+            <figure class="resume-image"><img src="assets/Screenshot 2026-10-22 191801.png" alt="A 3D model of a gold-toned ring with a broad, rounded rectangular top." width="232" height="278"><figcaption>3D ring model created in Onshape</figcaption></figure>
+          </article>
+          <article class="resume-entry resume-entry-text" aria-labelledby="visual-studio-title">
+            <div class="resume-copy">
+              <div class="resume-entry-heading"><h3 id="visual-studio-title">Visual Studio Projects</h3><p class="resume-date"><time datetime="2025-09">Sep. 2025</time> – <time datetime="2026-06">June 2026</time></p></div>
+              <p class="resume-subtitle">Computer Science and Programming C Sharp <span aria-hidden="true">|</span> Hightstown, NJ</p>
+              <ul class="resume-bullets"><li>Tackled a multitude of coding-based projects throughout the school year using the C Sharp programming language.</li><li>Completed projects that incorporated coding challenges as well as user interface work within the IDE.</li></ul>
+            </div>
+          </article>
+          <article class="resume-entry resume-entry-text" aria-labelledby="lighting-title">
+            <div class="resume-copy">
+              <div class="resume-entry-heading"><h3 id="lighting-title">Co-Lighting Head for School Play</h3><p class="resume-date"><time datetime="2023-09">Sep. 2023</time> – <time datetime="2023-11">Nov. 2023</time></p></div>
+              <p class="resume-subtitle">HHS Thespian Society <span aria-hidden="true">|</span> Hightstown, NJ</p>
+              <ul class="resume-bullets"><li>Collaborated with two team members to direct and program lighting setups for “Argonuts: Jason &amp; The Quest for the Golden Fleece.”</li><li>Programmed light positioning, color, and brightness tailored to stage directions provided by the play director.</li></ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="skills-page" id="skills" aria-labelledby="skills-title">
+        <header class="skills-heading"><p class="eyebrow">What I bring</p><h2 id="skills-title">Skills</h2></header>
+        <div class="skills-grid">
+          <section class="skills-card" aria-labelledby="languages-title"><p class="eyebrow">01</p><h3 id="languages-title">Languages</h3><dl class="skill-list"><div><dt>Python</dt><dd>Intermediate</dd></div><div><dt>C#</dt><dd>Intermediate</dd></div></dl></section>
+          <section class="skills-card" aria-labelledby="programs-title"><p class="eyebrow">02</p><h3 id="programs-title">Programs</h3><dl class="skill-list"><div><dt>Onshape</dt><dd>Beginner</dd></div><div><dt>Visual Studios</dt><dd>Intermediate</dd></div></dl></section>
+          <section class="skills-card" aria-labelledby="competencies-title"><p class="eyebrow">03</p><h3 id="competencies-title">Core Competencies</h3><ul class="skill-tags"><li>Communication</li><li>Problem-solving</li><li>Engineering Design Process</li></ul></section>
+          <section class="skills-card certifications-card" aria-labelledby="certifications-title"><p class="eyebrow">04</p><h3 id="certifications-title">Certifications</h3><ul class="certification-list"><li><span>Everyday AI Concepts</span><time datetime="2026">2026</time></li><li><span>Teen PEP Senior Graduation Certificate</span><time datetime="2026">2026</time></li><li><span>Teen PEP Middle Graduation Certificate</span><time datetime="2025">2025</time></li></ul></section>
+        </div>
+      </section>
+
+      <section class="contact-page" id="contact" aria-labelledby="contact-title">
+        <header class="contact-heading"><p class="eyebrow">Get in touch</p><h2 id="contact-title">Contact</h2></header>
+        <div class="contact-grid">
+          <section class="contact-card" aria-labelledby="email-title"><p class="eyebrow">01</p><h3 id="email-title">Email</h3><a href="mailto:bennettchristopher246@gmail.com">bennettchristopher246@gmail.com</a></section>
+          <section class="contact-card" aria-labelledby="linkedin-title"><p class="eyebrow">02</p><h3 id="linkedin-title">LinkedIn</h3><a href="https://www.linkedin.com/in/christopher-bennett-b60181434/" target="_blank" rel="noopener noreferrer">linkedin.com/in/christopher-bennett-b60181434</a></section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Christopher Bennett <span aria-hidden="true">·</span> Personal Portfolio</p>
+      <a href="#home">Back to top ↑</a>
+    </footer>
+  </body>
+</html>

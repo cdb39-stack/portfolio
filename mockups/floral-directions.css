@@ -1,0 +1,16 @@
+/* Full-page floral direction previews, separate from the published homepage. */
+.floral-switcher { position: relative; z-index: 9; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: .45rem; padding: .75rem 1rem; color: #26362b; background: #fffaf0; border-bottom: 1px solid #d1dec6; font-size: .82rem; }
+.floral-switcher span { color: #556a59; font-weight: 700; }
+.floral-switcher a { padding: .35rem .7rem; border-radius: 999px; color: #35513c; text-decoration: none; }
+.floral-switcher a:hover, .floral-switcher a:focus-visible { background: #e4ecd8; }
+.floral-switcher a:focus-visible { outline: 3px solid #476b46; outline-offset: 2px; }
+body.garden-loose, body.garden-foreground, body.garden-changing, body.garden-bloom { background-color: #dce8cd; background-repeat: repeat-y, no-repeat; background-position: center top, center; background-attachment: scroll, fixed; }
+body.garden-loose { background-image: url("loose-botanical.svg"), linear-gradient(180deg, #e4f0dc 0%, #dce8cd 34%, #d1dfbb 68%, #bfd3a4 100%); background-size: 100% 3000px, 100% 100%; }
+body.garden-foreground { background-image: url("foreground-flowers.svg"), linear-gradient(180deg, #e4f0dc 0%, #dce8cd 34%, #d1dfbb 68%, #bfd3a4 100%); background-size: 100% 3000px, 100% 100%; }
+body.garden-bloom { background-image: url("foreground-flowers-bloom.svg"), linear-gradient(180deg, #e4f0dc 0%, #dce8cd 34%, #d1dfbb 68%, #bfd3a4 100%); background-size: 100% 3000px, 100% 100%; }
+body.garden-changing { background-image: url("changing-garden.svg"), linear-gradient(180deg, #e4f0dc 0%, #dce8cd 34%, #d1dfbb 68%, #bfd3a4 100%); background-size: 100% 3000px, 100% 100%; }
+@media (max-width: 650px) {
+  .floral-switcher { gap: .18rem; padding: .5rem .35rem; font-size: .72rem; }
+  .floral-switcher span { width: 100%; text-align: center; }
+  .floral-switcher a { padding: .3rem .4rem; }
+}

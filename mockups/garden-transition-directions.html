@@ -1,0 +1,176 @@
+<style>
+#portfolio-vine-mockups {
+  --garden-ink: #26382a;
+  --garden-muted: #526a55;
+  --garden-leaf: #65885a;
+  --garden-light: #dbe9cb;
+  --garden-cream: #fffaf0;
+  --garden-line: #cbd9bd;
+  --garden-rose: #d8eac5;
+  color: var(--garden-ink);
+  font-family: "Segoe UI", Arial, sans-serif;
+  width: 100%;
+}
+#portfolio-vine-mockups * { box-sizing: border-box; }
+#portfolio-vine-mockups .direction {
+  min-height: 620px;
+  display: grid;
+  place-items: start center;
+  padding: 16px 12px 36px;
+}
+#portfolio-vine-mockups .mock-page {
+  width: min(100%, 370px);
+  height: 560px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #e4eed9;
+  box-shadow: 0 10px 28px rgba(51, 79, 50, .16);
+  isolation: isolate;
+}
+#portfolio-vine-mockups .mock-header {
+  position: relative;
+  z-index: 4;
+  height: 48px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 250, 240, .96);
+  border-bottom: 1px solid var(--garden-line);
+  color: var(--garden-muted);
+  font-size: 12px;
+  letter-spacing: .03em;
+}
+#portfolio-vine-mockups .mock-brand { color: var(--garden-ink); font-family: Georgia, serif; font-size: 18px; }
+#portfolio-vine-mockups .mock-menu { font-size: 11px; }
+#portfolio-vine-mockups .garden-scene {
+  position: absolute;
+  inset: 48px 0 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #e7f0dd 0%, #d9e7ca 57%, #c2d7ac 100%);
+}
+#portfolio-vine-mockups .mock-content { position: relative; z-index: 2; padding: 22px 18px; }
+#portfolio-vine-mockups .mock-kicker { margin: 0 0 5px; color: #4e724b; font-size: 9px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+#portfolio-vine-mockups .mock-title { margin: 0; font: 400 27px/1.08 Georgia, serif; letter-spacing: -.03em; }
+#portfolio-vine-mockups .mock-lede { margin: 7px 0 0; color: var(--garden-muted); font-size: 11px; }
+#portfolio-vine-mockups .mock-section {
+  position: relative;
+  min-height: 72px;
+  margin-top: 16px;
+  padding: 12px 14px;
+  border: 1px solid rgba(157, 181, 135, .74);
+  border-radius: 22px 10px 22px 10px;
+  background: rgba(255, 250, 240, .97);
+  box-shadow: 0 6px 15px rgba(45, 76, 45, .12);
+}
+#portfolio-vine-mockups .mock-section h3 { margin: 0; font: 400 17px/1.1 Georgia, serif; }
+#portfolio-vine-mockups .mock-section p { margin: 4px 0 0; color: var(--garden-muted); font-size: 10px; }
+#portfolio-vine-mockups .mock-section.short { width: 79%; }
+#portfolio-vine-mockups .mock-section.wide { width: 100%; }
+#portfolio-vine-mockups .vine-line, #portfolio-vine-mockups .path-line { position: absolute; z-index: 1; pointer-events: none; }
+#portfolio-vine-mockups .blossom { position: absolute; z-index: 3; width: 10px; height: 10px; border-radius: 50%; background: #f1d57e; box-shadow: 0 -10px 0 1px var(--garden-rose), 9px -4px 0 1px var(--garden-rose), 6px 8px 0 1px var(--garden-rose), -6px 8px 0 1px var(--garden-rose), -9px -4px 0 1px var(--garden-rose); }
+#portfolio-vine-mockups .design-label { margin: 0 0 9px; color: var(--garden-muted); font-size: 11px; font-weight: 600; letter-spacing: .04em; }
+
+/* Direction: a single sinuous stem stays continuous behind every section. */
+#portfolio-vine-mockups .unbroken .garden-scene { background: linear-gradient(180deg, #eaf2e2 0%, #dae8cc 65%, #c7d9b5 100%); }
+#portfolio-vine-mockups .unbroken .vine-line { top: -24px; bottom: -34px; left: 37px; width: 74px; border-left: 6px solid #688b5c; border-radius: 48% 0 0 46%; transform: rotate(7deg); }
+#portfolio-vine-mockups .unbroken .mock-content { padding-left: 111px; }
+#portfolio-vine-mockups .unbroken .mock-title { font-size: 25px; }
+#portfolio-vine-mockups .unbroken .mock-section { margin-left: -82px; width: calc(100% + 82px); }
+#portfolio-vine-mockups .unbroken .mock-section:nth-of-type(2) { margin-left: -52px; width: calc(100% + 52px); }
+#portfolio-vine-mockups .unbroken .blossom.a { left: 43px; top: 112px; }
+#portfolio-vine-mockups .unbroken .blossom.b { left: 78px; top: 300px; transform: scale(.82); }
+#portfolio-vine-mockups .unbroken .leaf { position: absolute; z-index: 2; left: 42px; width: 26px; height: 12px; border-radius: 100% 0 100% 0; background: #9fbe80; transform: rotate(-25deg); }
+#portfolio-vine-mockups .unbroken .leaf.one { top: 205px; }
+#portfolio-vine-mockups .unbroken .leaf.two { top: 410px; left: 69px; transform: rotate(32deg); }
+
+/* Direction: a winding garden path connects alternating section islands. */
+#portfolio-vine-mockups .pathway .garden-scene { background: linear-gradient(180deg, #e7f0df, #d4e4c5); }
+#portfolio-vine-mockups .pathway .path-line { top: -12px; bottom: -20px; left: 50%; width: 106px; transform: translateX(-50%); border-radius: 48%; background: linear-gradient(90deg, #e0d6ac, #f0e6c5 50%, #d8cfa6); opacity: .95; }
+#portfolio-vine-mockups .pathway .mock-content { padding: 22px 18px; }
+#portfolio-vine-mockups .pathway .mock-section.left { width: 78%; margin-left: 0; }
+#portfolio-vine-mockups .pathway .mock-section.right { width: 78%; margin-left: auto; }
+#portfolio-vine-mockups .pathway .mock-section:nth-of-type(2) { margin-top: 17px; }
+#portfolio-vine-mockups .pathway .blossom.a { left: calc(50% - 5px); top: 127px; }
+#portfolio-vine-mockups .pathway .blossom.b { left: calc(50% + 26px); top: 290px; transform: scale(.8); }
+#portfolio-vine-mockups .pathway .blossom.c { left: calc(50% - 37px); top: 430px; transform: scale(.72); }
+#portfolio-vine-mockups .pathway .mock-section { background: rgba(255, 250, 240, .98); }
+
+/* Direction: broad meadow layers fade between sections instead of forming a hard stripe. */
+#portfolio-vine-mockups .meadow .garden-scene { background: linear-gradient(180deg, #e6efdc 0%, #d9e7cb 45%, #c9ddb6 100%); }
+#portfolio-vine-mockups .meadow .meadow-band { position: absolute; z-index: 1; left: -12%; width: 124%; height: 160px; top: 175px; background: radial-gradient(ellipse at 15% 110%, #90ad78 0 28%, transparent 29%), radial-gradient(ellipse at 45% 110%, #a5bf86 0 33%, transparent 34%), radial-gradient(ellipse at 83% 110%, #89a873 0 30%, transparent 31%); opacity: .7; }
+#portfolio-vine-mockups .meadow .meadow-band.lower { top: 365px; transform: scaleX(-1); opacity: .55; }
+#portfolio-vine-mockups .meadow .mock-content { padding-top: 22px; }
+#portfolio-vine-mockups .meadow .mock-section { margin-top: 18px; background: rgba(255, 250, 240, .96); }
+#portfolio-vine-mockups .meadow .mock-section.short { margin-left: 7%; width: 93%; }
+#portfolio-vine-mockups .meadow .blossom.a { right: 39px; top: 178px; }
+#portfolio-vine-mockups .meadow .blossom.b { left: 33px; top: 370px; transform: scale(.82); }
+#portfolio-vine-mockups .meadow .vine-line { top: 122px; bottom: -20px; right: 24px; width: 68px; border-right: 5px solid #6b8b5d; border-radius: 0 45% 48% 0; transform: rotate(-7deg); }
+
+@media (max-width: 400px) {
+  #portfolio-vine-mockups .direction { padding-inline: 4px; }
+  #portfolio-vine-mockups .mock-content { padding-inline: 14px; }
+  #portfolio-vine-mockups .unbroken .mock-content { padding-left: 96px; }
+  #portfolio-vine-mockups .unbroken .mock-section { margin-left: -66px; width: calc(100% + 66px); }
+  #portfolio-vine-mockups .unbroken .mock-section:nth-of-type(2) { margin-left: -42px; width: calc(100% + 42px); }
+}
+</style>
+
+<div id="portfolio-vine-mockups" class="viz-carousel viz-dotted-background" aria-label="Garden transition design directions">
+  <section class="direction" data-variant="Unbroken Vine" aria-label="Unbroken Vine garden transition">
+    <div class="mock-page unbroken">
+      <header class="mock-header"><span class="mock-brand">CB.</span><span class="mock-menu">Home | About | Projects | Skills | Contact</span></header>
+      <div class="garden-scene">
+        <div class="vine-line"></div><span class="leaf one"></span><span class="leaf two"></span>
+        <span class="blossom a"></span><span class="blossom b"></span>
+        <div class="mock-content">
+          <p class="design-label">Smooth scroll connection</p>
+          <p class="mock-kicker">Portfolio · NJIT</p>
+          <h2 class="mock-title">Hello, I’m Christopher.</h2>
+          <p class="mock-lede">A leafy vine continues behind every section.</p>
+          <section class="mock-section wide"><h3>About Me</h3><p>The stem stays visible between the content panels.</p></section>
+          <section class="mock-section short"><h3>Projects</h3><p>Cards float beside the same continuous vine.</p></section>
+          <section class="mock-section wide"><h3>Skills</h3><p>Flowers mark the transitions without a hard divider.</p></section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="direction" data-variant="Garden Path" aria-label="Garden Path transition">
+    <div class="mock-page pathway">
+      <header class="mock-header"><span class="mock-brand">CB.</span><span class="mock-menu">Home | About | Projects | Skills | Contact</span></header>
+      <div class="garden-scene">
+        <div class="path-line"></div><span class="blossom a"></span><span class="blossom b"></span><span class="blossom c"></span>
+        <div class="mock-content">
+          <p class="design-label">Sections follow one garden path</p>
+          <p class="mock-kicker">Portfolio · NJIT</p>
+          <h2 class="mock-title">A path through my work.</h2>
+          <p class="mock-lede">A soft winding path links the page from top to bottom.</p>
+          <section class="mock-section left"><h3>About Me</h3><p>First section rests beside the path.</p></section>
+          <section class="mock-section right"><h3>Projects</h3><p>Next section shifts to the other side.</p></section>
+          <section class="mock-section left"><h3>Skills</h3><p>Flowers and path guide the eye down.</p></section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="direction" data-variant="Meadow Layers" aria-label="Meadow Layers transition">
+    <div class="mock-page meadow">
+      <header class="mock-header"><span class="mock-brand">CB.</span><span class="mock-menu">Home | About | Projects | Skills | Contact</span></header>
+      <div class="garden-scene">
+        <div class="meadow-band"></div><div class="meadow-band lower"></div><div class="vine-line"></div>
+        <span class="blossom a"></span><span class="blossom b"></span>
+        <div class="mock-content">
+          <p class="design-label">Soft layered meadow transitions</p>
+          <p class="mock-kicker">Portfolio · NJIT</p>
+          <h2 class="mock-title">Growing as I go.</h2>
+          <p class="mock-lede">Foliage fades in around each warm content panel.</p>
+          <section class="mock-section wide"><h3>About Me</h3><p>Grass becomes a soft backdrop, not a hard stripe.</p></section>
+          <section class="mock-section short"><h3>Projects</h3><p>Flowers bridge each quiet green layer.</p></section>
+          <section class="mock-section wide"><h3>Skills</h3><p>Panels remain clear above the meadow.</p></section>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

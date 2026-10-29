@@ -1,0 +1,68 @@
+/* Styles used only by the full-page garden transition previews. */
+.preview-switcher {
+  position: relative;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .55rem;
+  padding: .8rem 1rem;
+  color: #26362b;
+  background: #f8f7eb;
+  border-bottom: 1px solid #d1dec6;
+  font-size: .82rem;
+}
+.preview-label { color: #556a59; font-weight: 700; margin-right: .35rem; }
+.preview-switcher a { padding: .35rem .7rem; border-radius: 999px; color: #35513c; text-decoration: none; }
+.preview-switcher a:hover, .preview-switcher a:focus-visible { background: #e4ecd8; }
+.preview-switcher a:focus-visible { outline: 3px solid #476b46; outline-offset: 2px; }
+
+/* All preview scenes keep the same site content and raised panels. */
+body.variant-vine, body.variant-path, body.variant-meadow {
+  background-color: #dce8cd;
+  background-image: linear-gradient(180deg, #e4f0dc 0%, #dce8cd 34%, #d1dfbb 68%, #bfd3a4 100%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body.variant-vine {
+  background-image: url("garden-continuous.svg"), linear-gradient(180deg, #e4f0dc 0%, #dce8cd 34%, #d1dfbb 68%, #bfd3a4 100%);
+  background-size: 100% 1100px, 100% 100%;
+  background-repeat: repeat-y, no-repeat;
+  background-attachment: scroll, fixed;
+}
+body.variant-path { position: relative; isolation: isolate; }
+body.variant-path::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 82px);
+  width: 164px;
+  border-left: 3px solid rgba(174, 163, 116, .34);
+  border-right: 3px solid rgba(174, 163, 116, .24);
+  border-radius: 48% 52% 44% 56% / 3% 6% 5% 4%;
+  background: linear-gradient(90deg, rgba(206, 197, 157, .25), rgba(248, 239, 203, .86) 27%, rgba(248, 239, 203, .86) 73%, rgba(206, 197, 157, .25));
+  box-shadow: 0 0 38px rgba(131, 143, 102, .12);
+  pointer-events: none;
+}
+body.variant-path .about-page, body.variant-path .skills-page { transform: translateX(-1.2rem); }
+body.variant-path .projects-page, body.variant-path .contact-page { transform: translateX(1.2rem); }
+body.variant-meadow {
+  background-image: repeating-linear-gradient(180deg, transparent 0, transparent 610px, rgba(131, 162, 105, .13) 690px, rgba(157, 183, 128, .25) 810px, transparent 940px, transparent 1100px), linear-gradient(180deg, #e4f0dc 0%, #dce8cd 34%, #d1dfbb 68%, #bfd3a4 100%);
+  background-size: 100% 1100px, 100% 100%;
+  background-repeat: repeat-y, no-repeat;
+  background-attachment: scroll, fixed;
+}
+body.variant-meadow .about-page, body.variant-meadow .skills-page { box-shadow: 0 18px 44px rgba(52, 83, 48, .12), 0 4px 10px rgba(52, 83, 48, .05); }
+
+@media (max-width: 650px) {
+  .preview-switcher { gap: .2rem; padding: .5rem .4rem; font-size: .72rem; }
+  .preview-label { width: 100%; text-align: center; margin: 0; }
+  .preview-switcher a { padding: .3rem .45rem; }
+  body.variant-path::before { left: calc(50% - 52px); width: 104px; }
+  body.variant-path .about-page, body.variant-path .skills-page { transform: translateX(-.35rem); }
+  body.variant-path .projects-page, body.variant-path .contact-page { transform: translateX(.35rem); }
+}
