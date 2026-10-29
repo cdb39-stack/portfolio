@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="vine" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#476e47"/>
+      <stop offset="1" stop-color="#77965b"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#a5bf79"/>
+      <stop offset="1" stop-color="#557d50"/>
+    </linearGradient>
+    <g id="leaf-pair" fill="url(#leaf)" stroke="#52774b" stroke-width="2">
+      <ellipse cx="0" cy="0" rx="23" ry="10" transform="rotate(-32)"/>
+      <ellipse cx="8" cy="22" rx="22" ry="10" transform="rotate(25 8 22)"/>
+      <path d="M-18 8 20 27" fill="none" stroke="#68895a" stroke-width="1.5"/>
+    </g>
+    <g id="flower">
+      <g fill="#f3c1bb" stroke="#d98e8b" stroke-width="1.5">
+        <ellipse cy="-15" rx="8" ry="14"/>
+        <ellipse cy="-15" rx="8" ry="14" transform="rotate(60)"/>
+        <ellipse cy="-15" rx="8" ry="14" transform="rotate(120)"/>
+        <ellipse cy="-15" rx="8" ry="14" transform="rotate(180)"/>
+        <ellipse cy="-15" rx="8" ry="14" transform="rotate(240)"/>
+        <ellipse cy="-15" rx="8" ry="14" transform="rotate(300)"/>
+      </g>
+      <circle r="7" fill="#f4d887" stroke="#c9a954" stroke-width="1.5"/>
+    </g>
+    <g id="violet-flower">
+      <g fill="#d5c4e5" stroke="#a88fbe" stroke-width="1.5">
+        <ellipse cy="-13" rx="7" ry="12"/>
+        <ellipse cy="-13" rx="7" ry="12" transform="rotate(72)"/>
+        <ellipse cy="-13" rx="7" ry="12" transform="rotate(144)"/>
+        <ellipse cy="-13" rx="7" ry="12" transform="rotate(216)"/>
+        <ellipse cy="-13" rx="7" ry="12" transform="rotate(288)"/>
+      </g>
+      <circle r="6" fill="#f4d887"/>
+    </g>
+  </defs>
+
+  <g fill="none" stroke="url(#vine)" stroke-linecap="round" stroke-width="9" opacity=".88">
+    <path d="M-8-30 C118 80 4 160 96 270 S24 445 104 560 8 760 82 865 48 1015 92 1130"/>
+    <path d="M1608-40 C1480 85 1592 170 1500 280 S1570 450 1492 570 1580 745 1515 865 1550 1020 1504 1140"/>
+  </g>
+
+  <g opacity=".94">
+    <g transform="translate(34 65) rotate(-12)"><use href="#leaf-pair"/><use href="#leaf-pair" y="62"/><use href="#leaf-pair" y="124"/></g>
+    <g transform="translate(70 265) rotate(12)"><use href="#leaf-pair"/><use href="#leaf-pair" y="62"/><use href="#leaf-pair" y="124"/></g>
+    <g transform="translate(38 535) rotate(-8)"><use href="#leaf-pair"/><use href="#leaf-pair" y="62"/><use href="#leaf-pair" y="124"/></g>
+    <g transform="translate(68 795) rotate(9)"><use href="#leaf-pair"/><use href="#leaf-pair" y="62"/><use href="#leaf-pair" y="124"/></g>
+    <g transform="translate(1563 52) scale(-1 1) rotate(-12)"><use href="#leaf-pair"/><use href="#leaf-pair" y="62"/><use href="#leaf-pair" y="124"/></g>
+    <g transform="translate(1525 275) scale(-1 1) rotate(12)"><use href="#leaf-pair"/><use href="#leaf-pair" y="62"/><use href="#leaf-pair" y="124"/></g>
+    <g transform="translate(1560 545) scale(-1 1) rotate(-8)"><use href="#leaf-pair"/><use href="#leaf-pair" y="62"/><use href="#leaf-pair" y="124"/></g>
+    <g transform="translate(1528 804) scale(-1 1) rotate(9)"><use href="#leaf-pair"/><use href="#leaf-pair" y="62"/><use href="#leaf-pair" y="124"/></g>
+  </g>
+
+  <g fill="none" stroke="#668653" stroke-linecap="round" stroke-width="4">
+    <path d="M15 110 C75 95 80 75 84 48 M54 315 C5 292 19 265 9 242 M12 690 C77 675 82 655 86 625 M48 930 C4 905 16 875 10 850"/>
+    <path d="M1585 118 C1525 95 1520 76 1516 48 M1547 325 C1595 295 1580 265 1590 245 M1588 704 C1523 681 1518 660 1515 630 M1552 950 C1596 918 1582 890 1590 862"/>
+  </g>
+
+  <g transform="translate(84 48)"><use href="#flower"/></g>
+  <g transform="translate(21 245) scale(.8)"><use href="#violet-flower"/></g>
+  <g transform="translate(102 470) scale(1.15)"><use href="#flower"/></g>
+  <g transform="translate(24 735) scale(.88)"><use href="#violet-flower"/></g>
+  <g transform="translate(94 982) scale(1.1)"><use href="#flower"/></g>
+  <g transform="translate(1516 60) scale(.94)"><use href="#violet-flower"/></g>
+  <g transform="translate(1580 270) scale(1.05)"><use href="#flower"/></g>
+  <g transform="translate(1497 490) scale(.84)"><use href="#violet-flower"/></g>
+  <g transform="translate(1576 766) scale(1.1)"><use href="#flower"/></g>
+  <g transform="translate(1506 1012) scale(.9)"><use href="#violet-flower"/></g>
+
+  <g fill="#77965b" opacity=".75">
+    <path d="M0 1080q15-58 28 0 19-75 34 0 20-65 35 0 16-82 34 0 18-65 36 0v20H0z"/>
+    <path d="M1433 1100q15-58 28 0 19-75 34 0 20-65 35 0 16-82 34 0 18-65 36 0v20h-167z"/>
+  </g>
+</svg>
