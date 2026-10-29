@@ -31,15 +31,17 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--red-deep); outl
 .site-header {
   min-height: 76px; padding: 0 clamp(1.25rem, 7vw, 7rem);
   display: flex; align-items: center; justify-content: space-between;
-  border-bottom: 1px solid var(--line); background: rgba(255, 249, 248, 0.94);
+  position: sticky; top: 0; z-index: 10;
+  border-bottom: 1px solid var(--line); background: rgba(255, 249, 248, 0.96); backdrop-filter: blur(12px);
 }
 .brand { text-decoration: none; font: 700 1.45rem var(--serif); letter-spacing: -0.08em; }
 .brand span { color: var(--red); }
 .navigation { display: flex; gap: clamp(1.25rem, 3vw, 2.8rem); }
 .navigation a, .site-footer a { text-decoration: none; color: var(--muted); font-size: 0.92rem; }
-.navigation a:hover, .navigation a[aria-current="page"], .site-footer a:hover { color: var(--red-deep); }
+.navigation a:hover, .navigation a[aria-current="page"], .navigation a[aria-current="location"], .site-footer a:hover { color: var(--red-deep); }
 .menu-toggle { display: none; }
 main { overflow: hidden; }
+main > section[id] { scroll-margin-top: 90px; }
 .hero {
   min-height: 510px; padding: 5.5rem clamp(1.5rem, 12vw, 12rem);
   display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(200px, 0.6fr);
@@ -65,29 +67,29 @@ h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.3rem); }
 .intro-text { max-width: 700px; margin: 0; color: var(--muted); font-size: 1.05rem; }
 .about-page { padding: 4.5rem clamp(1.5rem, 12vw, 12rem) 5rem; background: white; }
 .about-heading { margin-bottom: 3rem; }
-.about-heading h1 { font-size: clamp(2.8rem, 6vw, 5rem); }
+.about-heading h1, .about-heading h2 { margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); }
 .about-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
 .about-card { padding: 1.8rem; border: 1px solid var(--line); background: var(--paper); }
 .about-card .eyebrow { margin-bottom: 1.1rem; }
-.about-card h2 { font-size: clamp(1.65rem, 3vw, 2.25rem); }
+.about-card h2, .about-card h3 { margin: 0; font: 400 clamp(1.65rem, 3vw, 2.25rem)/1.1 var(--serif); }
 .about-card > p:last-child { margin-bottom: 0; color: var(--muted); }
 .education-card { grid-row: span 2; background: var(--blush); }
 .education-list { margin: 1.7rem 0 0; padding: 0; list-style: none; }
 .education-list li { padding: 0 0 1.5rem 1.2rem; border-left: 2px solid #d99da0; }
 .education-list li:last-child { padding-bottom: 0; }
 .education-years { color: var(--red-deep); font-size: 0.82rem; font-weight: 700; }
-.education-list h3 { margin: 0.3rem 0; font: 1.25rem var(--serif); }
+.education-list h3, .education-list h4 { margin: 0.3rem 0; font: 1.25rem var(--serif); }
 .education-list p { margin: 0; color: var(--muted); }
 .about-interest-list { display: flex; flex-wrap: wrap; gap: 0.65rem; margin: 1.4rem 0 0; padding: 0; list-style: none; }
 .about-interest-list li { padding: 0.45rem 0.8rem; border: 1px solid var(--line); border-radius: 999px; color: var(--red-deep); background: white; font-size: 0.9rem; }
 .skills-page { min-height: calc(100vh - 156px); padding: 4.5rem clamp(1.5rem, 12vw, 12rem) 5rem; background: white; }
 .skills-heading { margin-bottom: 2.5rem; }
-.skills-heading h1 { font-size: clamp(2.8rem, 6vw, 5rem); }
+.skills-heading h1, .skills-heading h2 { margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); }
 .skills-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
 .skills-card { padding: 1.8rem; border: 1px solid var(--line); background: var(--paper); }
 .skills-card:nth-child(2), .certifications-card { background: var(--blush); }
 .skills-card .eyebrow { margin-bottom: 1.1rem; }
-.skills-card h2 { font-size: clamp(1.65rem, 3vw, 2.25rem); }
+.skills-card h2, .skills-card h3 { margin: 0; font: 400 clamp(1.65rem, 3vw, 2.25rem)/1.1 var(--serif); }
 .skill-list, .skill-tags, .certification-list { margin: 1.4rem 0 0; padding: 0; list-style: none; }
 .skill-list div, .certification-list li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.7rem 0; border-top: 1px solid var(--line); }
 .skill-list dt, .certification-list span { color: var(--ink); font-weight: 600; }
@@ -98,17 +100,17 @@ h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.3rem); }
 .certification-list span { font-weight: 500; }
 .contact-page { min-height: calc(100vh - 156px); padding: 4.5rem clamp(1.5rem, 12vw, 12rem) 5rem; background: white; }
 .contact-heading { margin-bottom: 2.5rem; }
-.contact-heading h1 { font-size: clamp(2.8rem, 6vw, 5rem); }
+.contact-heading h1, .contact-heading h2 { margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); }
 .contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
 .contact-card { min-width: 0; padding: 1.8rem; border: 1px solid var(--line); background: var(--paper); }
 .contact-card:nth-child(2) { background: var(--blush); }
 .contact-card .eyebrow { margin-bottom: 1.1rem; }
-.contact-card h2 { margin-bottom: 1.1rem; font-size: clamp(1.65rem, 3vw, 2.25rem); }
+.contact-card h2, .contact-card h3 { margin: 0 0 1.1rem; font: 400 clamp(1.65rem, 3vw, 2.25rem)/1.1 var(--serif); }
 .contact-card a { color: var(--red-deep); overflow-wrap: anywhere; }
 .contact-card a:hover { color: #71353c; }
 .projects-page { min-height: calc(100vh - 156px); padding: 4.5rem clamp(1.5rem, 12vw, 12rem) 5rem; background: white; }
 .projects-heading { margin-bottom: 2.5rem; }
-.projects-heading h1 { font-size: clamp(2.8rem, 6vw, 5rem); }
+.projects-heading h1, .projects-heading h2 { margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); }
 .resume-list { display: grid; gap: 1.25rem; }
 .resume-entry { max-width: 1050px; padding: 2rem clamp(1.25rem, 4vw, 2.5rem); border-left: 4px solid var(--red); background: var(--paper); display: grid; grid-template-columns: minmax(0, 1fr) minmax(170px, 250px); align-items: center; gap: clamp(1.5rem, 4vw, 3rem); }
 .resume-entry-text { grid-template-columns: minmax(0, 1fr); }
@@ -117,7 +119,7 @@ h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.3rem); }
 .resume-image img { display: block; width: 100%; height: auto; }
 .resume-image figcaption { margin-top: 0.55rem; color: var(--muted); font-size: 0.78rem; text-align: center; }
 .resume-entry-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
-.resume-entry h2 { font-size: clamp(1.7rem, 3.5vw, 2.5rem); }
+.resume-entry h2, .resume-entry h3 { margin: 0; font: 400 clamp(1.7rem, 3.5vw, 2.5rem)/1.1 var(--serif); }
 .resume-date { margin: 0; color: var(--red-deep); font-size: 0.9rem; font-weight: 700; white-space: nowrap; }
 .resume-subtitle { margin: 0.7rem 0 1.25rem; color: var(--muted); font-weight: 600; }
 .resume-bullets { margin: 0; padding-left: 1.25rem; color: var(--muted); }

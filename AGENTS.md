@@ -2,9 +2,9 @@
 
 ## Project overview
 
-This repository is for a public, static personal portfolio website built for the portfolio assignment. It will have five pages: Home, About Me, Projects, Skills, and Contact. The site should introduce its owner, describe their background and interests, present at least three projects with descriptions and images, summarize skills, and give visitors a way to make contact. Use genuine content supplied by the owner; do not invent personal facts or leave placeholder text in the finished site.
+This repository is for a public, static personal portfolio website built for the portfolio assignment. The canonical site is a single scrolling page in `index.html` with Home, About Me, Projects, Skills, and Contact sections. Keep the owner's background, education, projects, skills, and contact details together on that page. Use genuine content supplied by the owner; do not invent personal facts or leave placeholder text in the finished site.
 
-The repository currently contains only `README.md`. Treat this as the project plan until the owner supplies personal details. Keep the site usable by opening `index.html` directly and when published from the repository root with GitHub Pages.
+Keep the site usable by opening `index.html` directly and when published from the repository root with GitHub Pages. The individual section HTML files are compatibility pages; navigation from them should return visitors to the matching section in `index.html`.
 
 ## Design direction
 
@@ -24,11 +24,11 @@ Use a soft pastel red as the primary accent color, supported by warm off-white o
 
 ## Content and project requirements
 
-- Every page must link to all five pages through consistent site navigation.
+- The primary navigation links to the five sections in `index.html` using in-page anchors. Navigation from any compatibility page must link to those same homepage anchors.
 - Projects must include at least three real projects. Each should have a concise description and an image or screenshot with useful alt text; include a link when one is available.
 - Do not publish personal details until the owner provides or approves them.
 - Keep `README.md` current with a project description, live site link when known, local viewing instructions, and acknowledgments or notes as needed.
-- Maintain `TESTING.md` with at least 12 test cases covering every navigation link on each page, each page at phone and laptop widths, all JavaScript features (including valid and invalid form input if applicable), keyboard navigation on each page, and Lighthouse Accessibility on every page. Record actual results and rerun failed cases after fixes. Run the final plan against the deployed GitHub Pages site.
+- Maintain `TESTING.md` with at least 12 test cases covering each homepage section at phone and laptop widths, every navigation link, all JavaScript features (including valid and invalid form input if applicable), keyboard navigation, and Lighthouse Accessibility. Record actual results and rerun failed cases after fixes. Run the final plan against the deployed GitHub Pages site.
 
 ## Working approach
 
